@@ -1,35 +1,39 @@
 #!/bin/bash
 
-# --- Step 1: Push ---
-echo "---------------------------------------"
-echo "Step 1: Pushing changes to GitHub..."
-echo "---------------------------------------"
-git push
-
-# --- Step 2: Wait ---
-echo ""
-echo "---------------------------------------"
-echo "Step 2: Waiting for GitHub Action..."
-echo "---------------------------------------"
-# On attend 5 secondes que l'action apparaisse côté serveur
-sleep 5
-gh run watch
-
-# --- Step 3: Download ---
-echo ""
-echo "---------------------------------------"
-echo "Step 3: Downloading firmware..."
-echo "---------------------------------------"
-
-# Au lieu de --overwrite qui n'existe pas, on vide le dossier avant
+# 1. Préparation
+BRANCH=$(git branch --show-current)
 mkdir -p ./builds
-rm -rf ./builds/* # On télécharge
-gh run download --name firmware --dir ./builds
+
+# 2. On récupère les infos du DERNIER run de cette branche
+echo "Checking last run on $BRANCH..."
+LATEST_RUN=$(gh run list --branch "$BRANCH" --limit 1 --json databaseId,status,conclusion --jq '.[0]')
+RUN_ID=$(echo "$LATEST_RUN" | jq -r '.databaseId')
+STATUS=$(echo "$LATEST_RUN" | jq -r '.status')
+
+if [ "$RUN_ID" == "null" ]; then
+    echo "❌ No run found for $BRANCH. Did you push?"
+    exit 1
+fi
+
+# 3. On agit selon le statut
+if [ "$STATUS" != "completed" ]; then
+    echo "⏳ Build is still $STATUS. Waiting..."
+    gh run watch "$RUN_ID"
+else
+    echo "✅ Build already completed. Skipping wait."
+fi
+
+# 4. Téléchargement propre
+echo "---------------------------------------"
+echo "Downloading Firmware (ID: $RUN_ID)..."
+echo "---------------------------------------"
+rm -rf ./builds/*
+gh run download "$RUN_ID" --dir ./builds
 
 if [ $? -eq 0 ]; then
-    echo "✨ Success! Firmware is in ./builds"
-    ls -l ./builds
+    echo "✨ Done! Content of ./builds:"
+    # On regarde récursivement ce qu'il y a dedans
+    ls -R ./builds
 else
-    echo "❌ ERROR: Download failed."
-    echo "Tip: Try 'gh run list' to see the status of your builds."
+    echo "❌ Download failed."
 fi

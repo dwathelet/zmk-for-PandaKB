@@ -1,0 +1,12 @@
+name: Draw Keymap
+on: [push, workflow_dispatch]
+jobs:
+  draw:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: caksoylar/keymap-drawer-action@v1
+        with:
+          keymap_lines: 6  # Ajuste selon la taille de ton Sofle
+          config_path: 'keymap_drawer.config.yaml' # Optionnel
+          output_path: 'keymap_display.svg'
