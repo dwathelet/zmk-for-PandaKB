@@ -3,10 +3,12 @@ on: [push, workflow_dispatch]
 jobs:
   draw:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Obligatoire pour que l'action puisse pusher l'image sur ton repo
     steps:
       - uses: actions/checkout@v4
-      - uses: caksoylar/keymap-drawer-action@v1
+      - uses: caksoylar/keymap-drawer@main # <-- Correction ici
         with:
-          keymap_lines: 6  # Ajuste selon la taille de ton Sofle
-          config_path: 'keymap_drawer.config.yaml' # Optionnel
-          output_path: 'keymap_display.svg'
+          keymap_path: "config/Sofle.keymap" # On précise bien le chemin avec la majuscule
+          output_path: "keymap_display.svg"
+          draw_args: "sofle:v2" # Optionnel : aide à bien dessiner la forme du Sofle
