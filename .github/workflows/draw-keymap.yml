@@ -8,5 +8,13 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/Sofle.keymap"
-      config_path: "keymap_drawer.config.yaml" 
+      config_path: "keymap_drawer.config.yaml"
+      extra_keymap_yaml: |
+                layers:
+                  Lower:
+                    - q: 52
+                      type: held
+                  Raise:
+                    - q: 57
+                      type: held 
       output_folder: "img"
