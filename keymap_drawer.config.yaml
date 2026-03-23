@@ -1,13 +1,12 @@
-# CONTENU COMPLET DE keymap_drawer.config.yaml
+# Ce fichier ne doit contenir que des paramètres de dessin ou de parsing, PAS tes couches.
 draw_config:
-  svg_extra_style: |
-    rect.held { fill: #fbd5e5 !important; stroke: #ff006e !important; }
-    text.held { fill: #ff006e !important; font-weight: bold; }
   key_w: 60
   key_h: 56
-  split_gap: 30
-
+  res: 135
+  font_size: 12
+  line_spacing: 1.2
+  sticky_label: sticky
+  l_label: ""
+  r_label: ""
 parse_config:
-  raw_binding_map:
-    "&mo 1": {t: "Lower", c: "held"}
-    "&mo 2": {t: "Raise", c: "held"}
+  check_unnamed_layer: true
