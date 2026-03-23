@@ -1,8 +1,8 @@
 # Configuration pour le rendu visuel
 parse_config:
-  # On force l'outil à reconnaître ton Tap Dance comme un accès à la couche LOWER
+  # Étape 1 : Donne un nom clair à ta touche Tap Dance
   raw_binding_map:
-    "&td_numpad": {t: "LOWER"}
+    "&td_numpad": {t: "LWR/NUM"} 
 
   # On remplace les codes barbares par des noms ou icônes plus sympas
   symbol_map:
@@ -30,6 +30,13 @@ parse_config:
     "LGUI": "GUI"
 
 # Optionnel : Si tu veux changer les couleurs ou le style (CSS)
+
 draw_config:
-  dark_mode: true  # Pour un rendu plus "tech"
-  line_spacing: 1.2
+  dark_mode: true # Rendu plus 'tech'
+  # Étape 2 : C'est ICI que tout se joue.
+  # On dit : Sur le dessin de la couche 'lower', 
+  # considère que n'importe quelle touche étiquetée "LWR/NUM" est maintenue ('held'),
+  # ce qui va la colorier en rose/rouge.
+  layer_hints:
+    "lower":
+      "LWR/NUM": held
