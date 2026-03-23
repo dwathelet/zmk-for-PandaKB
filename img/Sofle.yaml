@@ -26,7 +26,7 @@ layers:
   - KP 8
   - KP 9
   - KP PLUS
-  - F12
+  - DELETE
   - EP TOG
   - '!'
   - '@'
@@ -80,8 +80,8 @@ layers:
   - INS
   - PSCRN
   - CMENU
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - OUT BLE
+  - OUT USB
   - PG UP
   - {t: ▽, type: trans}
   - UP
