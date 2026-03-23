@@ -1,10 +1,33 @@
+# keymap_drawer.config.yaml complet
 parse_config:
   raw_binding_map:
-    # On force l'outil à croire que c'est un Momentary Layer (&mo)
-    "&td_numpad": {"t": "LOWER", "type": "mo", "layer": "lower"}
-    "&mo RAISE": {"t": "RAISE", "type": "mo", "layer": "raise"}
+    "&td_numpad": "LOWER"
+    "&mo RAISE": "RAISE"
 
 draw_config:
   dark_mode: true
-  # On ne met RIEN dans layer_hints pour laisser l'outil 
-  # colorier naturellement ce qu'il croit être des touches de couche.
+  
+  # LE FIX RADICAL : On injecte du CSS pour forcer la couleur 
+  # sur les couches spécifiques.
+  append_style: |
+    /* Sur la couche lower (index 1), on force la touche 40 (pouce gauche) en rouge */
+    svg.layer-lower .key-40 rect { fill: #f87171 !important; }
+    svg.layer-lower .key-40 text { fill: white !important; }
+
+    /* Sur la couche raise (index 2), on force la touche 41 (pouce droit) en rouge */
+    svg.layer-raise .key-41 rect { fill: #f87171 !important; }
+    svg.layer-raise .key-41 text { fill: white !important; }
+
+    /* Sur la couche adjust (index 3), on force les DEUX pouces en rouge */
+    svg.layer-adjust .key-40 rect, svg.layer-adjust .key-41 rect { fill: #f87171 !important; }
+    svg.layer-adjust .key-40 text, svg.layer-adjust .key-41 text { fill: white !important; }
+
+  # On garde ça pour la forme, mais le CSS ci-dessus a la priorité
+  layer_hints:
+    lower:
+      - {label: "LOWER", state: held}
+    raise:
+      - {label: "RAISE", state: held}
+    adjust:
+      - {label: "LOWER", state: held}
+      - {label: "RAISE", state: held}
