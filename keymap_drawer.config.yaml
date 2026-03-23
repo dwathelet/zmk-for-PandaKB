@@ -1,25 +1,23 @@
 # keymap_drawer.config.yaml
 parse_config:
   raw_binding_map:
-    # On donne des labels clairs aux liaisons
-    "&mo RAISE": "RSE"
-    "&td_numpad": "LOWER"
+    "&td_numpad": "LOWER_KEY"
+    "&mo RAISE": "RAISE_KEY"
 
 draw_config:
   dark_mode: true
   
-  # Configuration manuelle des couleurs sur les diagrammes
+  # On force manuellement le rouge (held) uniquement là où c'est vrai
   layer_hints:
-    # Sur la couche 'lower', on colorie le pouce Lower
     "lower":
-      "LOWER": held
-      
-    # Sur la couche 'raise', on colorie le pouce Raise
+      - {label: "LOWER_KEY", state: held}
     "raise":
-      "RSE": held
-      
-    # C'EST ICI LA CORRECTION POUR ADJUST
-    # Sur la couche 'adjust', on force les DEUX en rouge
+      - {label: "RAISE_KEY", state: held}
     "adjust":
-      - {label: "LOWER", state: held}
-      - {label: "RSE", state: held}
+      - {label: "LOWER_KEY", state: held}
+      - {label: "RAISE_KEY", state: held}
+
+  # Pour que le texte affiché soit propre
+  mapped_symbols:
+    "LOWER_KEY": "LOWER"
+    "RAISE_KEY": "RAISE"
