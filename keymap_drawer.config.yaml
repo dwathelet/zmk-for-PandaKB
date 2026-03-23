@@ -1,7 +1,12 @@
+# keymap_drawer.config.yaml
 parse_config:
+  # Étape 1 : On change le label pour qu'il ne ressemble pas exactement au nom du layer
   raw_binding_map:
-    # On définit le type "mo" pour que l'outil comprenne le lien avec la couche
-    "&td_numpad": {t: "LOWER", type: "mo", layer: "lower"}
+    "&td_numpad": {t: "LWR/NUM"} 
 
 draw_config:
   dark_mode: true
+  # Étape 2 : On dit de colorier la touche "LWR/NUM" UNIQUEMENT sur la couche "lower"
+  layer_hints:
+    "lower":
+      "LWR/NUM": held
