@@ -1,33 +1,40 @@
-# keymap_drawer.config.yaml complet
-parse_config:
-  raw_binding_map:
-    "&td_numpad": "LOWER"
-    "&mo RAISE": "RAISE"
-
+# Configuration complète pour Keymap-Drawer
 draw_config:
-  dark_mode: true
-  
-  # LE FIX RADICAL : On injecte du CSS pour forcer la couleur 
-  # sur les couches spécifiques.
-  append_style: |
-    /* Sur la couche lower (index 1), on force la touche 40 (pouce gauche) en rouge */
-    svg.layer-lower .key-40 rect { fill: #f87171 !important; }
-    svg.layer-lower .key-40 text { fill: white !important; }
+  # 1. Injection du CSS pour mettre en évidence les touches "maintenues"
+  svg_extra_style: |
+    /* Style pour la touche qui active la couche (fond rose, texte gras) */
+    rect.held { fill: #fbd5e5 !important; stroke: #ff006e !important; }
+    text.held { fill: #ff006e !important; font-weight: bold; }
+    
+    /* Style optionnel pour les combos ou les tap-dances */
+    rect.combo { fill: #e0e0ff !important; }
 
-    /* Sur la couche raise (index 2), on force la touche 41 (pouce droit) en rouge */
-    svg.layer-raise .key-41 rect { fill: #f87171 !important; }
-    svg.layer-raise .key-41 text { fill: white !important; }
+  # Paramètres d'affichage classiques
+  key_w: 60
+  key_h: 56
+  split_gap: 30
 
-    /* Sur la couche adjust (index 3), on force les DEUX pouces en rouge */
-    svg.layer-adjust .key-40 rect, svg.layer-adjust .key-41 rect { fill: #f87171 !important; }
-    svg.layer-adjust .key-40 text, svg.layer-adjust .key-41 text { fill: white !important; }
+parse_config:
+  # 2. Mapping des comportements ZMK vers des classes CSS
+  # Remplace les exemples ci-dessous par tes propres tap-dances ou mod-taps
+  raw_binding_map:
+    "&td0": {t: "Layer Tap", c: "held"}
+    "&mo 1": {t: "Lower", c: "held"}
+    "&mo 2": {t: "Raise", c: "held"}
+    "&mt LSHIFT SPACE": {t: "Shift/Space", c: "held"}
 
-  # On garde ça pour la forme, mais le CSS ci-dessus a la priorité
-  layer_hints:
-    lower:
-      - {label: "LOWER", state: held}
-    raise:
-      - {label: "RAISE", state: held}
-    adjust:
-      - {label: "LOWER", state: held}
-      - {label: "RAISE", state: held}
+# 3. Section d'ajustement spécifique par couche (Sparse Overrides)
+# C'est ici que tu forces l'affichage d'une touche "Held" si le parsing auto ne suffit pas.
+# 'q' représente l'index de la touche (0 est la première touche en haut à gauche).
+layers:
+  Lower:
+    - q: 36          # Exemple : Index du pouce gauche qui active la couche Lower
+      type: held
+  Raise:
+    - q: 41          # Exemple : Index du pouce droit qui active la couche Raise
+      type: held
+
+# 4. Gestion des combos (si tu en as)
+  sticky_label: "sticky"
+  toggle_label: "toggle"
+  tap_dance_label: "tap-dance"
