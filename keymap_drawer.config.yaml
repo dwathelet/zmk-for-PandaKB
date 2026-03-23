@@ -1,23 +1,17 @@
 # keymap_drawer.config.yaml
 parse_config:
   raw_binding_map:
-    "&td_numpad": "LOWER_KEY"
-    "&mo RAISE": "RAISE_KEY"
+    "&td_numpad": "LOWER"
+    "&mo RAISE": "RAISE"
 
 draw_config:
   dark_mode: true
-  
-  # On force manuellement le rouge (held) uniquement là où c'est vrai
+  # On oublie les labels, on donne les positions exactes des touches
   layer_hints:
     "lower":
-      - {label: "LOWER_KEY", state: held}
+      - {index: 40, state: held}
     "raise":
-      - {label: "RAISE_KEY", state: held}
+      - {index: 41, state: held}
     "adjust":
-      - {label: "LOWER_KEY", state: held}
-      - {label: "RAISE_KEY", state: held}
-
-  # Pour que le texte affiché soit propre
-  mapped_symbols:
-    "LOWER_KEY": "LOWER"
-    "RAISE_KEY": "RAISE"
+      - {index: 40, state: held}
+      - {index: 41, state: held}
