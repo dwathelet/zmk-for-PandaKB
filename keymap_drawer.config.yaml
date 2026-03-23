@@ -1,16 +1,10 @@
-# keymap_drawer.config.yaml
 parse_config:
   raw_binding_map:
-    "&td_numpad": "LOWER"
-    "&mo RAISE": "RAISE"
+    # On force l'outil à croire que c'est un Momentary Layer (&mo)
+    "&td_numpad": {"t": "LOWER", "type": "mo", "layer": "lower"}
+    "&mo RAISE": {"t": "RAISE", "type": "mo", "layer": "raise"}
 
 draw_config:
-  # On utilise la syntaxe dictionnaire simple, sans tirets
-  layer_hints:
-    lower:
-      LOWER: held
-    raise:
-      RAISE: held
-    adjust:
-      LOWER: held
-      RAISE: held
+  dark_mode: true
+  # On ne met RIEN dans layer_hints pour laisser l'outil 
+  # colorier naturellement ce qu'il croit être des touches de couche.
