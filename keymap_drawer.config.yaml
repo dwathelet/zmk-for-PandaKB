@@ -5,13 +5,12 @@ parse_config:
     "&mo RAISE": "RAISE"
 
 draw_config:
-  dark_mode: true
-  # On oublie les labels, on donne les positions exactes des touches
+  # On utilise la syntaxe dictionnaire simple, sans tirets
   layer_hints:
-    "lower":
-      - {index: 40, state: held}
-    "raise":
-      - {index: 41, state: held}
-    "adjust":
-      - {index: 40, state: held}
-      - {index: 41, state: held}
+    lower:
+      LOWER: held
+    raise:
+      RAISE: held
+    adjust:
+      LOWER: held
+      RAISE: held
