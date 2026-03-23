@@ -3,10 +3,10 @@ on: [push, workflow_dispatch]
 
 jobs:
   draw:
-    # C'EST ICI LA CLÉ : On appelle directement le fichier de workflow de l'auteur
     uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/Sofle.keymap" # Attention à la majuscule de Sofle
-      output_folder: "img" # Créera un dossier 'img' pour ranger les SVG proprement
+      keymap_patterns: "config/Sofle.keymap"
+      config_path: "keymap_drawer.config.yaml" 
+      output_folder: "img"

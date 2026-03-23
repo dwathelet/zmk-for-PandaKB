@@ -1,0 +1,35 @@
+# Configuration pour le rendu visuel
+parse_config:
+  # On force l'outil à reconnaître ton Tap Dance comme un accès à la couche LOWER
+  raw_binding_map:
+    "&td_numpad": {t: "LOWER", type: "held"}
+
+  # On remplace les codes barbares par des noms ou icônes plus sympas
+  symbol_map:
+    # Bluetooth
+    "BT_CLR": "BT CLR"
+    "BT_SEL 0": "BT 1"
+    "BT_SEL 1": "BT 2"
+    "BT_SEL 2": "BT 3"
+    "BT_SEL 3": "BT 4"
+    "BT_SEL 4": "BT 5"
+    
+    # RGB & Power
+    "RGB_TOG": "RGB TOG"
+    "EP_TOG": "PWR TOG"
+    "RGB_BRI": "BRIGHT +"
+    "RGB_BRD": "BRIGHT -"
+    "RGB_EFF": "EFFECT"
+    
+    # Touches spéciales
+    "C_MUTE": "MUTE"
+    "LSHIFT": "SHFT"
+    "RSHIFT": "SHFT"
+    "LCTRL": "CTRL"
+    "LALT": "ALT"
+    "LGUI": "GUI"
+
+# Optionnel : Si tu veux changer les couleurs ou le style (CSS)
+draw_config:
+  dark_mode: true  # Pour un rendu plus "tech"
+  line_spacing: 1.2
