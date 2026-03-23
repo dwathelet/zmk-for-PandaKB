@@ -1,16 +1,13 @@
-# Réglages visuels uniquement
+# CONTENU COMPLET DE keymap_drawer.config.yaml
 draw_config:
   svg_extra_style: |
-    /* Définit la couleur rose pour les touches 'held' */
     rect.held { fill: #fbd5e5 !important; stroke: #ff006e !important; }
     text.held { fill: #ff006e !important; font-weight: bold; }
-
   key_w: 60
   key_h: 56
   split_gap: 30
 
 parse_config:
-  # Dit à l'outil : "Si tu vois &mo 1, mets la classe held"
   raw_binding_map:
     "&mo 1": {t: "Lower", c: "held"}
     "&mo 2": {t: "Raise", c: "held"}
