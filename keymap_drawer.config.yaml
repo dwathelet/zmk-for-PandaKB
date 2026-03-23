@@ -1,15 +1,11 @@
 # keymap_drawer.config.yaml
 parse_config:
   raw_binding_map:
-    "&td_numpad": "LWR_KEY"
+    "&td_numpad": "LOWER"
 
 draw_config:
-  # On force l'état "maintenu" (rouge) spécifiquement pour le texte LWR_KEY
-  # uniquement sur le diagramme de la couche "lower"
+  # On force le style "held" (rouge) par index de touche
+  # Pour le layer "lower", on cible la touche à la position exacte
   layer_hints:
     "lower":
-      - {label: "LWR_KEY", state: held}
-
-  # Pour que ce soit propre visuellement sur le clavier
-  mapped_symbols:
-    "LWR_KEY": "LOWER"
+      - {index: 40, state: held}
