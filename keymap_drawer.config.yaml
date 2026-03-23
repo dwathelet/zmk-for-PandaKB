@@ -1,40 +1,20 @@
-# Configuration complète pour Keymap-Drawer
+# keymap_drawer.config.yaml
 draw_config:
-  # 1. Injection du CSS pour mettre en évidence les touches "maintenues"
+  # Style pour les touches marquées comme "held"
   svg_extra_style: |
-    /* Style pour la touche qui active la couche (fond rose, texte gras) */
     rect.held { fill: #fbd5e5 !important; stroke: #ff006e !important; }
     text.held { fill: #ff006e !important; font-weight: bold; }
     
-    /* Style optionnel pour les combos ou les tap-dances */
+    /* Optionnel : style pour les combos */
     rect.combo { fill: #e0e0ff !important; }
 
-  # Paramètres d'affichage classiques
   key_w: 60
   key_h: 56
   split_gap: 30
 
 parse_config:
-  # 2. Mapping des comportements ZMK vers des classes CSS
-  # Remplace les exemples ci-dessous par tes propres tap-dances ou mod-taps
+  # Mapping automatique des comportements ZMK vers la classe CSS "held"
   raw_binding_map:
-    "&td0": {t: "Layer Tap", c: "held"}
     "&mo 1": {t: "Lower", c: "held"}
     "&mo 2": {t: "Raise", c: "held"}
-    "&mt LSHIFT SPACE": {t: "Shift/Space", c: "held"}
-
-# 3. Section d'ajustement spécifique par couche (Sparse Overrides)
-# C'est ici que tu forces l'affichage d'une touche "Held" si le parsing auto ne suffit pas.
-# 'q' représente l'index de la touche (0 est la première touche en haut à gauche).
-layers:
-  Lower:
-    - q: 36          # Exemple : Index du pouce gauche qui active la couche Lower
-      type: held
-  Raise:
-    - q: 41          # Exemple : Index du pouce droit qui active la couche Raise
-      type: held
-
-# 4. Gestion des combos (si tu en as)
-  sticky_label: "sticky"
-  toggle_label: "toggle"
-  tap_dance_label: "tap-dance"
+    "&td0": {t: "TD(0)", c: "held"}
