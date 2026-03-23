@@ -2,7 +2,7 @@
 parse_config:
   # On force l'outil à reconnaître ton Tap Dance comme un accès à la couche LOWER
   raw_binding_map:
-    "&td_numpad": {t: "LOWER", type: "held"}
+    "&td_numpad": {t: "LOWER"}
 
   # On remplace les codes barbares par des noms ou icônes plus sympas
   symbol_map:
