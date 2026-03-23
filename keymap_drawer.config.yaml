@@ -1,42 +1,7 @@
-# Configuration pour le rendu visuel
 parse_config:
-  # Étape 1 : Donne un nom clair à ta touche Tap Dance
   raw_binding_map:
-    "&td_numpad": {t: "LWR/NUM"} 
-
-  # On remplace les codes barbares par des noms ou icônes plus sympas
-  symbol_map:
-    # Bluetooth
-    "BT_CLR": "BT CLR"
-    "BT_SEL 0": "BT 1"
-    "BT_SEL 1": "BT 2"
-    "BT_SEL 2": "BT 3"
-    "BT_SEL 3": "BT 4"
-    "BT_SEL 4": "BT 5"
-    
-    # RGB & Power
-    "RGB_TOG": "RGB TOG"
-    "EP_TOG": "PWR TOG"
-    "RGB_BRI": "BRIGHT +"
-    "RGB_BRD": "BRIGHT -"
-    "RGB_EFF": "EFFECT"
-    
-    # Touches spéciales
-    "C_MUTE": "MUTE"
-    "LSHIFT": "SHFT"
-    "RSHIFT": "SHFT"
-    "LCTRL": "CTRL"
-    "LALT": "ALT"
-    "LGUI": "GUI"
-
-# Optionnel : Si tu veux changer les couleurs ou le style (CSS)
+    # On définit le type "mo" pour que l'outil comprenne le lien avec la couche
+    "&td_numpad": {t: "LOWER", type: "mo", layer: "lower"}
 
 draw_config:
-  dark_mode: true # Rendu plus 'tech'
-  # Étape 2 : C'est ICI que tout se joue.
-  # On dit : Sur le dessin de la couche 'lower', 
-  # considère que n'importe quelle touche étiquetée "LWR/NUM" est maintenue ('held'),
-  # ce qui va la colorier en rose/rouge.
-  layer_hints:
-    "lower":
-      "LWR/NUM": held
+  dark_mode: true
