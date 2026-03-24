@@ -1,7 +1,66 @@
 layout: {zmk_keyboard: Sofle}
 layers:
-  default: ['`', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '', ESC, Q, W, E, R, T, Y, U, I, O, P, BSPC, TAB, A, S, D, F, G, H, J, K, L, ;, '''', LSHFT, Z,
-    X, C, V, B, MUTE, RGB TOG, N, M, ',', ., /, RSHFT, LGUI, LALT, LCTRL, '&td_numpad', RET, SPACE, raise, RCTRL, RALT, RGUI]
+  default:
+  - {t: '`', h: PRINTSCREEN}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - {t: '-', h: PRINTSCREEN}
+  - ESC
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BSPC
+  - TAB
+  - A
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - L
+  - ;
+  - ''''
+  - LSHFT
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - MUTE
+  - RGB TOG
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RSHFT
+  - LGUI
+  - LALT
+  - LCTRL
+  - '&td_numpad'
+  - RET
+  - SPACE
+  - raise
+  - RCTRL
+  - RALT
+  - RGUI
   lower:
   - {t: ▽, type: trans}
   - F1
