@@ -14,7 +14,7 @@ layers:
   - '0'
   - {t: '-', h: PRINTSCREEN}
   - ESC
-  - A
+  - D
   - W
   - E
   - R
