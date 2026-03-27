@@ -2,20 +2,20 @@ layout: {zmk_keyboard: Sofle}
 layers:
   default:
   - {t: '`', h: PRINTSCREEN}
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - '&'
+  - é
+  - '"'
+  - ''''
+  - (
+  - §
+  - è
+  - '!'
+  - ç
+  - à
   - {t: '-', h: PRINTSCREEN}
   - ESC
-  - D
-  - W
+  - A
+  - Z
   - E
   - R
   - T
@@ -26,7 +26,7 @@ layers:
   - P
   - BSPC
   - TAB
-  - A
+  - Q
   - S
   - D
   - F
@@ -38,7 +38,7 @@ layers:
   - ;
   - ''''
   - LSHFT
-  - Z
+  - W
   - X
   - C
   - V
@@ -47,14 +47,14 @@ layers:
   - RGB TOG
   - N
   - ','
-  - ','
-  - .
+  - M
+  - ':'
   - /
   - RSHFT
   - LGUI
   - LALT
   - LCTRL
-  - '&td_numpad'
+  - {t: Num, type: hold}
   - RET
   - SPACE
   - raise
@@ -75,11 +75,11 @@ layers:
   - KP SUBTRACT
   - {t: PRINTSCREEN, h: Ctl+Alt+DELETE}
   - '`'
-  - '1'
-  - '2'
-  - '3'
-  - '4'
-  - '5'
+  - '&'
+  - é
+  - '"'
+  - ''''
+  - (
   - PSCRN
   - KP 7
   - KP 8
@@ -106,7 +106,7 @@ layers:
   - '}'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '0'
+  - à
   - KP 1
   - KP 2
   - KP 3
@@ -145,7 +145,7 @@ layers:
   - {t: ▽, type: trans}
   - UP
   - {t: ▽, type: trans}
-  - '0'
+  - à
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LALT
