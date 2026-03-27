@@ -46,7 +46,7 @@ layers:
   - MUTE
   - RGB TOG
   - N
-  - M
+  - ','
   - ','
   - .
   - /
