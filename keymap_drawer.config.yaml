@@ -1,27 +1,10 @@
 parse_config:
-  preprocess: true
   raw_binding_map:
     Q: A
     W: Z
     A: Q
     Z: W
-    M: ','
-    SEMI: M
-    N1: '&'
-    N2: 'é'
-    N3: '"'
-    N4: "'"
-    N5: '('
-    N6: '§'
-    N7: 'è'
-    N8: '!'
-    N9: 'ç'
-    N0: 'à'
-    MINUS: ')'
-    EQUAL: '-'
-    COMMA: ';'
-    DOT: ':'
-    SLASH: '='
-    SQT: 'ù'
-    LBKT: '^'
-    RBKT: '$'
+    M: ","
+    N1: "&"
+    N2: "é"
+    # Ajoute les autres ici plus tard une fois que ça marche
