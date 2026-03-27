@@ -12,7 +12,7 @@ layers:
   - '!'
   - ç
   - à
-  - {t: '-', h: PRINTSCREEN}
+  - {t: '-', h: '='}
   - ESC
   - A
   - Z
@@ -24,7 +24,7 @@ layers:
   - I
   - O
   - P
-  - BSPC
+  - {t: '[', h: ']'}
   - TAB
   - Q
   - S
@@ -36,7 +36,7 @@ layers:
   - K
   - L
   - M
-  - ''''
+  - {t: '''', h: \}
   - LSHFT
   - W
   - X
@@ -56,7 +56,7 @@ layers:
   - LCTRL
   - {t: Num, type: numpad_red}
   - RET
-  - SPACE
+  - {t: SPACE, h: BACKSPACE}
   - raise
   - RCTRL
   - RALT
