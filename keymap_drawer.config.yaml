@@ -6,24 +6,25 @@ draw_config:
   shrink_wide_legends: 7
 parse_config:
   preprocess: true
-  raw_binding_map:
-    # Lettres inversées
-    Q: "A"
-    "Q": "A"
-    K_Q: "A"
+raw_binding_map:
+    # Lettres
     "&kp Q": "A"
-    "A": Q
-    K_Z: W
-    "&kp M": ','
-    SEMI: M
-    # Chiffres Layer 0 BE
-    N1: '&'
-    N2: 'é'
-    N3: '"'
-    N4: "'"
-    N5: '('
-    N6: '§'
-    N7: 'è'
-    N8: '!'
-    N9: 'ç'
-    N0: 'à'
+    "&kp W": "Z"
+    "&kp A": "Q"
+    "&kp Z": "W"
+    "&kp M": ","      # Le M physique devient la virgule
+    "&kp COMMA": "M"  # La virgule physique devient le M
+    "&kp DOT": ":"    # Le point devient deux-points (ou point selon ton driver)
+    "&kp SLASH": "!"  # Le slash devient point d'exclamation
+
+    # Chiffres (La rangée du haut sans Shift)
+    "&kp N1": "&"
+    "&kp N2": "é"
+    "&kp N3": '"'
+    "&kp N4": "'"
+    "&kp N5": "("
+    "&kp N6": "§"
+    "&kp N7": "è"
+    "&kp N8": "!"
+    "&kp N9": "ç"
+    "&kp N0": "à"
