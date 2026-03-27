@@ -1,10 +1,27 @@
+draw_config:
+  key_w: 60.0
+  key_h: 56.0
+  dark_mode: true
+  n_columns: 1
+  shrink_wide_legends: 7
 parse_config:
+  preprocess: true
   raw_binding_map:
+    # Lettres inversées
     Q: A
     W: Z
     A: Q
     Z: W
-    M: ","
-    N1: "&"
-    N2: "é"
-    # Ajoute les autres ici plus tard une fois que ça marche
+    M: ','
+    SEMI: M
+    # Chiffres Layer 0 BE
+    N1: '&'
+    N2: 'é'
+    N3: '"'
+    N4: "'"
+    N5: '('
+    N6: '§'
+    N7: 'è'
+    N8: '!'
+    N9: 'ç'
+    N0: 'à'
