@@ -26,10 +26,10 @@ layers:
   - P
   - {t: '[', h: ']'}
   - TAB
-  - Q
-  - S
-  - D
-  - F
+  - {t: Q, h: LEFT GUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LEFT SHIFT}
+  - {t: F, h: LCTRL}
   - G
   - H
   - J
