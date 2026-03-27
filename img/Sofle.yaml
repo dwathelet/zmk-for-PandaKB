@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Sofle}
 layers:
   default:
-  - {t: ▽, type: trans}
+  - {t: '`', h: PRINTSCREEN}
   - '1'
   - '2'
   - '3'
@@ -12,7 +12,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - {t: ▽, type: trans}
+  - {t: '-', h: PRINTSCREEN}
   - ESC
   - Q
   - W
@@ -73,7 +73,7 @@ layers:
   - Sft+KP DIVIDE
   - KP MULTIPLY
   - KP SUBTRACT
-  - {t: ▽, type: trans}
+  - {t: PRINTSCREEN, h: Ctl+Alt+DELETE}
   - '`'
   - '1'
   - '2'
