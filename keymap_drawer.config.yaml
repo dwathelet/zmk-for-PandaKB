@@ -35,6 +35,7 @@ parse_config:
     "&kp M": ","      # Le M physique devient la virgule
     "&kp SEMI": "M"  # La virgule physique devient le M
     "&kp DOT": ":"    # Le point devient deux-points (ou point selon ton driver)
+    "&kp COMA": ";"
     "&kp SLASH": "!"  # Le slash devient point d'exclamation
   
     # Chiffres (La rangée du haut sans Shift)
