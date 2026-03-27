@@ -7,7 +7,7 @@ draw_config:
 parse_config:
   preprocess: true
 raw_binding_map:
-    # Lettres
+    # --- Les Lettres ---
     "&kp Q": "A"
     "&kp W": "Z"
     "&kp A": "Q"
@@ -17,7 +17,7 @@ raw_binding_map:
     "&kp DOT": ":"
     "&kp SLASH": "!"
 
-    # Chiffres (La rangée du haut sans Shift)
+    # --- La ligne des chiffres ---
     "&kp N1": "&"
     "&kp N2": "é"
     "&kp N3": '"'
@@ -28,3 +28,6 @@ raw_binding_map:
     "&kp N8": "!"
     "&kp N9": "ç"
     "&kp N0": "à"
+
+    # --- Ta touche Tap Dance en rouge (La méthode simple) ---
+    "&td_numpad": {"tap": "Num", "type": "hold"}
