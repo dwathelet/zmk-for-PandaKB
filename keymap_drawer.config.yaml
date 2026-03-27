@@ -12,9 +12,9 @@ parse_config:
     "Q": "A"
     K_Q: "A"
     "&kp Q": "A"
-    A: Q
-    Z: W
-    M: ','
+    "A": Q
+    K_Z: W
+    "&kp M": ','
     SEMI: M
     # Chiffres Layer 0 BE
     N1: '&'
