@@ -29,6 +29,17 @@
 
             bindings = <&mo LOWER>, <&tog LOWER>;
         };
+
+        spc_bs: spc_bs {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPC_BS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "tap-unless-interrupted";
+        };
     };
 
     conditional_layers {
@@ -45,11 +56,11 @@
 
         default_layer {
             bindings = <
-&mt PRINTSCREEN GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                     &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &mt PRINTSCREEN MINUS
-&kp ESC                &kp Q   &kp W     &kp E     &kp R      &kp T                                      &kp Y      &kp U      &kp I      &kp O     &kp P     &kp BSPC
-&kp TAB                &kp A   &kp S     &kp D     &kp F      &kp G                                      &kp H      &kp J      &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT              &kp Z   &kp X     &kp C     &kp V      &kp B       &kp C_MUTE    &rgb_ug RGB_TOG  &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-                               &kp LGUI  &kp LALT  &kp LCTRL  &td_numpad  &kp RET       &kp SPACE        &mo RAISE  &kp RCTRL  &kp RALT   &kp RGUI
+&mt PRINTSCREEN GRAVE  &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                                             &kp N6     &kp N7     &kp N8     &kp N9    &kp N0    &mt EQUAL MINUS
+&kp ESC                &kp Q   &kp W     &kp E     &kp R      &kp T                                              &kp Y      &kp U      &kp I      &kp O     &kp P     &mt RIGHT_BRACKET LEFT_BRACKET
+&kp TAB                &kp A   &kp S     &kp D     &kp F      &kp G                                              &kp H      &kp J      &kp K      &kp L     &kp SEMI  &mt BACKSLASH SQT
+&kp LSHFT              &kp Z   &kp X     &kp C     &kp V      &kp B       &kp C_MUTE    &rgb_ug RGB_TOG          &kp N      &kp M      &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
+                               &kp LGUI  &kp LALT  &kp LCTRL  &td_numpad  &kp RET       &spc_bs BACKSPACE SPACE  &mo RAISE  &kp RCTRL  &kp RALT   &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
