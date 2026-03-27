@@ -373,7 +373,6 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(491, 288) rotate(-30.0)" class="key keypos-55">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
 <text x="0" y="0" class="key tap">SPACE</text>
-<text x="0" y="38" class="key hold"><tspan style="font-size: 78%">BACKSPACE</tspan></text>
 </g>
 <g transform="translate(552, 274) rotate(-23.0)" class="key keypos-56">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>

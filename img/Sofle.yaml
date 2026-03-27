@@ -56,7 +56,7 @@ layers:
   - LCTRL
   - {t: Num, type: numpad_red}
   - RET
-  - {t: SPACE, h: BACKSPACE}
+  - SPACE
   - raise
   - RCTRL
   - RALT
