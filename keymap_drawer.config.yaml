@@ -33,7 +33,7 @@ parse_config:
     "&kp A": "Q"
     "&kp Z": "W"
     "&kp M": ","      # Le M physique devient la virgule
-    "&kp COMMA": "M"  # La virgule physique devient le M
+    "&kp SEMI": "M"  # La virgule physique devient le M
     "&kp DOT": ":"    # Le point devient deux-points (ou point selon ton driver)
     "&kp SLASH": "!"  # Le slash devient point d'exclamation
   
