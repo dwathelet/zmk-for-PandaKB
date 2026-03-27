@@ -28,3 +28,4 @@ parse_config:
       "&kp N8": "!"
       "&kp N9": "ç"
       "&kp N0": "à"
+      "&td_numpad": {"tap": "Num", "type": "hold"}
