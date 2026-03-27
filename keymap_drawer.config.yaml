@@ -1,5 +1,9 @@
 draw_config:
-  # ... tes autres réglages ...
+  key_w: 60.0
+  key_h: 56.0
+  dark_mode: true
+  n_columns: 1
+  shrink_wide_legends: 7
   append_style: |
     /* On définit le rouge pour la touche Numpad */
     rect.numpad_red { fill: #ff4444 !important; }
