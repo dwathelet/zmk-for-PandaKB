@@ -8,8 +8,10 @@ parse_config:
   preprocess: true
   raw_binding_map:
     # Lettres inversées
-    Q: A
-    W: Z
+    Q: "A"
+    "Q": "A"
+    K_Q: "A"
+    "&kp Q": "A"
     A: Q
     Z: W
     M: ','
