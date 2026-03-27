@@ -35,7 +35,7 @@ layers:
   - J
   - K
   - L
-  - ;
+  - M
   - ''''
   - LSHFT
   - W
@@ -47,7 +47,7 @@ layers:
   - RGB TOG
   - N
   - ','
-  - M
+  - ','
   - ':'
   - /
   - RSHFT
