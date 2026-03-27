@@ -17,4 +17,5 @@ jobs:
                   Raise:
                     - q: 57
                       type: held 
+      fail_on_error: true
       output_folder: "img"
