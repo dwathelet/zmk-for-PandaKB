@@ -8,7 +8,7 @@ parse_config:
   preprocess: true
 raw_binding_map:
     # Lettres
-    "&kp Q": "A"
+    "&kp Q": "U"
     "&kp W": "Z"
     "&kp A": "Q"
     "&kp Z": "W"
