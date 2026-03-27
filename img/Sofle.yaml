@@ -62,7 +62,7 @@ layers:
   - RALT
   - RGUI
   lower:
-  - ESCAPE
+  - A
   - F1
   - F2
   - F3
