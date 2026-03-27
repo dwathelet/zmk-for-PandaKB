@@ -54,7 +54,7 @@ layers:
   - LGUI
   - LALT
   - LCTRL
-  - {t: Num, type: hold}
+  - {t: Num, type: numpad_red}
   - RET
   - SPACE
   - raise
@@ -87,11 +87,11 @@ layers:
   - KP PLUS
   - DELETE
   - EP TOG
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
   - TAB
   - KP 4
   - KP 5
