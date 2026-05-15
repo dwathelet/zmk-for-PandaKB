@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: Corne}
 layers:
-  AZERTY: [TAB, A, Z, E, R, T, Y, U, I, O, P, BSPC, LCTRL, Q, S, D, F, G, H, J, K, L, ',', '[', LSHFT, W, X, C, V, B, N, ;, M, ':', /, ESC, LGUI, CHIFFRES, SPACE,
+  AZERTY: [TAB, A, Z, E, R, T, Y, U, I, O, P, BSPC, LCTRL, Q, S, D, F, G, H, J, K, L, ',', '''', LSHFT, W, X, C, V, B, N, ;, M, ':', /, ESC, LGUI, CHIFFRES, SPACE,
     RET, SYMBOLES, RALT]
   CHIFFRES:
   - TAB
@@ -47,16 +47,16 @@ layers:
   - RALT
   SYMBOLES:
   - TAB
-  - Sft+/
-  - '"'
-  - Sft+3
-  - '4'
-  - Sft+[
   - '&'
-  - Sft+.
+  - é
+  - '"'
+  - ''''
   - (
   - §
-  - Sft+=
+  - è
+  - '!'
+  - ç
+  - à
   - BSPC
   - LCTRL
   - {t: ▽, type: trans}
@@ -64,23 +64,23 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '-'
-  - Sft+8
-  - AltGr+5
-  - AltGr+0
-  - AltGr+8
-  - Sft+7
+  - (
+  - §
+  - AltGr+4
+  - AltGr+2
+  - Sft+\
+  - '`'
   - LSHFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ''''
   - '='
-  - AltGr+4
-  - AltGr+2
-  - AltGr+6
+  - Sft+=
+  - AltGr+5
+  - AltGr+0
+  - AltGr+8
   - AltGr+7
   - LGUI
   - {t: ▽, type: trans}
@@ -99,8 +99,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&sys_reset'
+  - '&bootloader'
   - BT CLR
   - {t: BT, h: '0'}
   - {t: BT, h: '1'}
