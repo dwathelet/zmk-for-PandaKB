@@ -1,0 +1,51 @@
+draw_config:
+  key_w: 60.0
+  key_h: 56.0
+  dark_mode: true
+  n_columns: 1
+  shrink_wide_legends: 7
+  append_style: |
+    /* On définit le rouge pour la touche Numpad */
+    rect.numpad_red { fill: #ff4444 !important; }
+    text.numpad_red { fill: white !important; font-weight: bold; }
+
+parse_config:
+  preprocess: true
+  raw_binding_map:
+    # --- Ta touche rouge ---
+    "&td_numpad": {"tap": "Num", "type": "numpad_red"}
+
+    # --- La ligne EP TOG (Symboles -> Chiffres) ---
+    # On mappe ce que le parseur voit (les symboles) vers ce que tu veux voir (les chiffres)
+    "&kp EXCL": "1"
+    "&kp AT": "2"
+    "&kp HASH": "3"
+    "&kp DLLR": "4"
+    "&kp PRCNT": "5"
+    "&kp CARET": "6"
+    "&kp AMPS": "7"
+    "&kp ASTRK": "8"
+    "&kp LPAR": "9"
+    "&kp RPAR": "0"
+      # Lettres
+    "&kp Q": "A"
+    "&kp W": "Z"
+    "&kp A": "Q"
+    "&kp Z": "W"
+    "&kp M": ","      # Le M physique devient la virgule
+    "&kp SEMI": "M"  # La virgule physique devient le M
+    "&kp DOT": ":"    # Le point devient deux-points (ou point selon ton driver)
+    "&kp COMMA": ";"
+    "&kp SLASH": "!"  # Le slash devient point d'exclamation
+  
+    # Chiffres (La rangée du haut sans Shift)
+    "&kp N1": "&"
+    "&kp N2": "é"
+    "&kp N3": '"'
+    "&kp N4": "'"
+    "&kp N5": "("
+    "&kp N6": "§"
+    "&kp N7": "è"
+    "&kp N8": "!"
+    "&kp N9": "ç"
+    "&kp N0": "à"    

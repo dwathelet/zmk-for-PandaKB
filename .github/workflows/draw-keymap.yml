@@ -1,0 +1,13 @@
+name: Draw ZMK keymaps
+on: [push, workflow_dispatch]
+
+jobs:
+  draw:
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/Sofle.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      fail_on_error: true
+      output_folder: "img"
