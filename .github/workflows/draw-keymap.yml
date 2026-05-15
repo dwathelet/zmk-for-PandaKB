@@ -7,7 +7,7 @@ jobs:
     permissions:
       contents: write
     with:
-      keymap_patterns: "config/Sofle.keymap"
+      keymap_patterns: "config/Corne.keymap"
       config_path: "keymap_drawer.config.yaml"
       fail_on_error: true
       output_folder: "img"
