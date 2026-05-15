@@ -10,7 +10,6 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
-    // Activation automatique du Layer 3 quand Lower (1) et Raise (2) sont pressés
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -26,12 +25,12 @@
             display-name = "AZERTY";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  A  |  Z  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  Q  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  M  |  %   |
+// | CTRL |  Q  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  M  |  ù   |
 // | SHFT |  W  |  X  |  C  |  V  |  B  |   |  N  |  ,   |  ;  |  :  |  !  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
             bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp M    &kp LBKT
+   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp M    &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp COMMA &kp SEMI &kp DOT &kp FSLH &kp ESC
                   &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
             >;
@@ -55,29 +54,29 @@
         raise_layer {
             display-name = "SYMBOLES";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  "  |  #  |  $  |  %  |   |  &  |  /  |  (  |  )  |  =  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  _  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  '  |  +  |  {  |  }  | "|" |  ~   |
+// |  TAB |  &  |  é  |  "  |  '  |  (  |   |  -  |  è  |  _  |  ç  |  à  | BKSP |
+// | CTRL |     |     |     |     |     |   |  (  |  )  |  {  |  }  |  * |  `   |
+// | SHFT |     |     |     |     |     |   |  +  |  =  |  [  |  ]  |  \  |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
             bindings = <
-   &kp TAB   &kp LS(FSLH) &kp N3    &kp LS(N3) &kp DLLR  &kp LS(LBKT)  &kp N1    &kp LS(DOT) &kp N5    &kp N6    &kp LS(EQUAL) &kp BSPC
-   &kp LCTRL &trans       &trans    &trans     &trans    &trans        &kp MINUS &kp LS(N8)  &kp RA(N5) &kp RA(N0) &kp RA(N8)    &kp LS(N7)
-   &kp LSHFT &trans       &trans    &trans     &trans    &trans        &kp N4    &kp EQUAL   &kp RA(N4) &kp RA(N2) &kp RA(N6)    &kp RA(N7)
-                                    &kp LGUI   &trans    &kp SPACE     &kp RET   &trans      &kp RALT
+   &kp TAB   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
+   &kp LCTRL &trans    &trans    &trans    &trans    &trans      &kp N5    &kp N6    &kp RA(N4) &kp RA(N2) &kp LS(BSLH) &kp GRAVE
+   &kp LSHFT &trans    &trans    &trans    &trans    &trans      &kp EQUAL &kp LS(EQUAL) &kp RA(N5) &kp RA(N0) &kp RA(N8) &kp RA(N7)
+                                 &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
             >;
         };
 
         adjust_layer {
             display-name = "REGLAGES";
 // -----------------------------------------------------------------------------------------
-// | BOOT | RST |     |     |     |     |   |     |     |     |     |     |      |
+// | BOOT | RST |     |     |     |     |   |     |     |     |     | RST | BOOT |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | TOG | BR+ | BR- | EFF |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
             bindings = <
-   &bootloader  &sys_reset   &trans       &trans       &trans       &trans         &trans          &trans          &trans          &trans          &trans &trans
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &rgb_ug RGB_TOG &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_EFF &trans &trans
-   &trans       &trans       &trans       &trans       &trans       &trans         &trans          &trans          &trans          &trans          &trans &trans
+   &bootloader  &sys_reset   &trans       &trans       &trans       &trans         &trans          &trans          &trans          &trans          &sys_reset &bootloader
+   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &rgb_ug RGB_TOG &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_EFF &trans     &trans
+   &trans       &trans       &trans       &trans       &trans       &trans         &trans          &trans          &trans          &trans          &trans     &trans
                                           &trans       &trans       &trans         &trans          &trans          &trans
             >;
         };
