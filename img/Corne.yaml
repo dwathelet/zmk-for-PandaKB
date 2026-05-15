@@ -1,0 +1,133 @@
+layout: {zmk_keyboard: Corne}
+layers:
+  AZERTY: [TAB, A, Z, E, R, T, Y, U, I, O, P, BSPC, LCTRL, Q, S, D, F, G, H, J, K, L, ',', '[', LSHFT, W, X, C, V, B, N, ;, M, ':', /, ESC, LGUI, CHIFFRES, SPACE,
+    RET, SYMBOLES, RALT]
+  CHIFFRES:
+  - TAB
+  - Sft+1
+  - Sft+2
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - Sft+7
+  - Sft+8
+  - Sft+9
+  - Sft+0
+  - BSPC
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LGUI
+  - {type: held}
+  - SPACE
+  - RET
+  - {t: ▽, type: trans}
+  - RALT
+  SYMBOLES:
+  - TAB
+  - Sft+/
+  - '"'
+  - Sft+3
+  - '4'
+  - Sft+[
+  - '&'
+  - Sft+.
+  - (
+  - §
+  - Sft+=
+  - BSPC
+  - LCTRL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '-'
+  - Sft+8
+  - AltGr+5
+  - AltGr+0
+  - AltGr+8
+  - Sft+7
+  - LSHFT
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''''
+  - '='
+  - AltGr+4
+  - AltGr+2
+  - AltGr+6
+  - AltGr+7
+  - LGUI
+  - {t: ▽, type: trans}
+  - SPACE
+  - RET
+  - {type: held}
+  - RALT
+  REGLAGES:
+  - '&bootloader'
+  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - RGB TOG
+  - RGB BRI
+  - RGB BRD
+  - RGB EFF
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
