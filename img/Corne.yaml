@@ -14,29 +14,29 @@ layers:
   - Sft+8
   - Sft+9
   - Sft+0
-  - BSPC
+  - DELETE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT
-  - DOWN
+  - HOME
   - UP
-  - RIGHT
+  - END
+  - PAGE UP
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - INSERT
   - LSHFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN
+  - RIGHT
+  - PAGE DOWN
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LGUI
