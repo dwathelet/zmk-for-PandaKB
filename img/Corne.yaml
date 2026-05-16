@@ -78,7 +78,7 @@ layers:
   - {t: ▽, type: trans}
   - _
   - KP PLUS
-  - AltGr+{
+  - AltGr+9
   - AltGr+0
   - AltGr+8
   - AltGr+7
