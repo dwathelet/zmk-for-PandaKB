@@ -5,13 +5,14 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
+
         tri_layer {
             if-layers = <1 2>;
             then-layer = <3>;
@@ -23,61 +24,69 @@
 
         default_layer {
             display-name = "AZERTY";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  A  |  Z  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  Q  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  M  |  ù   |
-// | SHFT |  W  |  X  |  C  |  V  |  B  |   |  N  |  ,   |  ;  |  :  |  !  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  A  |  Z  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | CTRL |  Q  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  M  |  ù   |
+            // | SHFT |  W  |  X  |  C  |  V  |  B  |   |  N  |  ,   |  ;  |  :  |  !  | ESC  |
+            //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+
             bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp M    &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp COMMA &kp SEMI &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y    &kp U      &kp I     &kp O    &kp P     &kp BSPC
+&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H    &kp J      &kp K     &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N    &kp COMMA  &kp M     &kp DOT  &kp FSLH  &kp ESC
+                         &kp LGUI  &mo 1  &kp SPACE  &kp RET  &mo 2      &kp RALT
             >;
         };
 
         lower_layer {
             display-name = "CHIFFRES";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
+            // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     |      |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-   &kp TAB    &kp LS(N1) &kp LS(N2) &kp LS(N3) &kp LS(N4) &kp LS(N5)   &kp LS(N6) &kp LS(N7) &kp LS(N8) &kp LS(N9) &kp LS(N0) &kp BSPC
-   &trans     &trans     &trans     &trans     &trans     &trans       &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &trans     &trans
-   &kp LSHFT  &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans     &trans
-                                    &kp LGUI   &trans     &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp BSPC
+&trans     &trans      &trans      &trans      &trans      &trans      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
+&kp LSHFT  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+                                   &kp LGUI    &trans      &kp SPACE   &kp RET     &trans      &kp RALT
             >;
         };
 
         raise_layer {
             display-name = "SYMBOLES";
-// -----------------------------------------------------------------------------------------
-// |  TAB |  &  |  é  |  "  |  '  |  (  |   |  -  |  è  |  _  |  ç  |  à  | BKSP |
-// | CTRL |     |     |     |     |     |   |  (  |  )  |  {  |  }  |  * |  `   |
-// | SHFT |     |     |     |     |     |   |  +  |  =  |  [  |  ]  |  \  |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  &  |  é  |  "  |  '  |  (  |   |  -  |  è  |  _  |  ç  |  à  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  (  |  )  |  {  |  }  |  * |  `   |
+            // | SHFT |     |     |     |     |     |   |  +  |  =  |  [  |  ]  |  \  |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-   &kp TAB   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp BSPC
-   &kp LCTRL &trans    &trans    &trans    &trans    &trans      &kp N5    &kp N6    &kp RA(N4) &kp RA(N2) &kp LS(BSLH) &kp GRAVE
-   &kp LSHFT &trans    &trans    &trans    &trans    &trans      &kp EQUAL &kp LS(EQUAL) &kp RA(N5) &kp RA(N0) &kp RA(N8) &kp RA(N7)
-                                 &kp LGUI  &trans    &kp SPACE   &kp RET   &trans    &kp RALT
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4  &kp N5     &kp N6     &kp N7         &kp N8      &kp N9      &kp N0        &kp BSPC
+&kp LCTRL  &trans  &trans  &trans    &trans  &trans     &kp N5     &kp N6         &kp RA(N4)  &kp RA(N2)  &kp LS(BSLH)  &kp GRAVE
+&kp LSHFT  &trans  &trans  &trans    &trans  &trans     &kp EQUAL  &kp LS(EQUAL)  &kp RA(N5)  &kp RA(N0)  &kp RA(N8)    &kp RA(N7)
+                           &kp LGUI  &trans  &kp SPACE  &kp RET    &trans         &kp RALT
             >;
         };
 
         adjust_layer {
             display-name = "REGLAGES";
-// -----------------------------------------------------------------------------------------
-// | BOOT | RST |     |     |     |     |   |     |     |     |     | RST | BOOT |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | TOG | BR+ | BR- | EFF |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+
+            // -----------------------------------------------------------------------------------------
+            // | BOOT | RST |     |     |     |     |   |     |     |     |     | RST | BOOT |
+            // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | TOG | BR+ | BR- | EFF |     |      |
+            // |      |     |     |     |     |     |   |     |     |     |     |     |      |
+            //                    |     |     |     |   |     |     |     |
+
             bindings = <
-   &bootloader  &sys_reset   &trans       &trans       &trans       &trans         &trans          &trans          &trans          &trans          &sys_reset &bootloader
-   &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &rgb_ug RGB_TOG &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_EFF &trans     &trans
-   &trans       &trans       &trans       &trans       &trans       &trans         &trans          &trans          &trans          &trans          &trans     &trans
-                                          &trans       &trans       &trans         &trans          &trans          &trans
+&bootloader  &sys_reset    &trans        &trans        &trans        &trans        &trans           &trans           &trans           &trans           &sys_reset  &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &rgb_ug RGB_EFF  &trans      &trans
+&trans       &trans        &trans        &trans        &trans        &trans        &trans           &trans           &trans           &trans           &trans      &trans
+                                         &trans        &trans        &trans        &trans           &trans           &trans
             >;
         };
     };
