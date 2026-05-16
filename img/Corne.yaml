@@ -62,12 +62,12 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - (
+  - '-'
   - KP MINUS
   - KP EQUAL
-  - AltGr+4
-  - AltGr+2
+  - AltGr+[
+  - AltGr+]
   - Sft+\
   - '`'
   - LSHFT
@@ -78,7 +78,7 @@ layers:
   - {t: ▽, type: trans}
   - _
   - KP PLUS
-  - AltGr+5
+  - AltGr+{
   - AltGr+0
   - AltGr+8
   - AltGr+7
