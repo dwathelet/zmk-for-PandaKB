@@ -64,8 +64,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - (
-  - §
+  - KP MINUS
+  - KP EQUAL
   - AltGr+4
   - AltGr+2
   - Sft+\
@@ -76,8 +76,8 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '='
-  - Sft+=
+  - _
+  - KP PLUS
   - AltGr+5
   - AltGr+0
   - AltGr+8
