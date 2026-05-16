@@ -49,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp BSPC
-&trans     &trans      &trans      &trans      &trans      &trans      &kp LEFT    &kp DOWN    &kp UP      &kp RIGHT   &trans      &trans
-&kp LSHFT  &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-                                   &kp LGUI    &trans      &kp SPACE   &kp RET     &trans      &kp RALT
+&kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)      &kp LS(N7)  &kp LS(N8)  &kp LS(N9)     &kp LS(N0)  &kp DELETE
+&trans     &trans      &trans      &trans      &trans      &trans      &kp HOME        &kp UP      &kp END     &kp PAGE_UP    &trans      &kp INSERT
+&kp LSHFT  &trans      &trans      &trans      &trans      &trans      &kp LEFT_ARROW  &kp DOWN    &kp RIGHT   &kp PAGE_DOWN  &trans      &trans
+                                   &kp LGUI    &trans      &kp SPACE   &kp RET         &trans      &kp RALT
             >;
         };
 
