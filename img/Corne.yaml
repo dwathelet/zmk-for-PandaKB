@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Corne}
 layers:
-  AZERTY: [TAB, A, Z, E, R, T, Y, U, I, O, P, BSPC, LCTRL, Q, S, D, F, G, H, J, K, L, M, '''', LSHFT, W, X, C, V, B, N, ;, ',', ':', /, ESC, LGUI, CHIFFRES, SPACE,
-    RET, SYMBOLES, RALT]
+  AZERTY: [TAB, A, Z, E, R, T, Y, U, I, O, P, BSPC, LCTRL, Q, S, D, F, G, H, J, K, L, M, '''', LSHFT, W, X, C, V, B, N, ;, ',', ':', /, ESC, LGUI, CHIFFRES, ENTER,
+    SPACE, SYMBOLES, RALT]
   CHIFFRES:
   - TAB
   - Sft+1
@@ -21,10 +21,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - HOME
-  - UP
-  - END
-  - PAGE UP
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
   - {t: ▽, type: trans}
   - INSERT
   - LSHFT
@@ -33,10 +33,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT ARROW
-  - DOWN
-  - RIGHT
+  - HOME
+  - END
   - PAGE DOWN
+  - PAGE UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LGUI
@@ -64,11 +64,11 @@ layers:
   - {t: ▽, type: trans}
   - (
   - '-'
-  - KP MINUS
-  - KP EQUAL
+  - '5'
+  - '-'
   - AltGr+[
   - AltGr+]
-  - Sft+\
+  - '{'
   - '`'
   - LSHFT
   - {t: ▽, type: trans}
@@ -80,7 +80,7 @@ layers:
   - KP PLUS
   - AltGr+9
   - AltGr+0
-  - AltGr+8
+  - '}'
   - AltGr+7
   - LGUI
   - {t: ▽, type: trans}
