@@ -68,8 +68,8 @@ layers:
   - '-'
   - AltGr+[
   - AltGr+]
-  - '{'
-  - '`'
+  - '['
+  - ''''
   - LSHFT
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -80,8 +80,8 @@ layers:
   - KP PLUS
   - AltGr+9
   - AltGr+0
-  - '}'
-  - AltGr+7
+  - ']'
+  - \
   - LGUI
   - {t: ▽, type: trans}
   - SPACE
