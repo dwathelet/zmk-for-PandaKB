@@ -1,7 +1,48 @@
 layout: {zmk_keyboard: Corne}
 layers:
-  AZERTY: [TAB, A, Z, E, R, T, Y, U, I, O, P, BSPC, LCTRL, Q, S, D, F, G, H, J, K, L, M, '''', LSHFT, W, X, C, V, B, N, ',', ;, ':', /, ESC, LGUI, CHIFFRES, SPACE,
-    SPACE, SYMBOLES, RALT]
+  AZERTY:
+  - TAB
+  - A
+  - Z
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BSPC
+  - LCTRL
+  - {t: Q, h: LEFT GUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LEFT SHIFT}
+  - G
+  - H
+  - {t: J, h: RIGHT SHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: LEFT ALT}
+  - {t: M, h: RIGHT GUI}
+  - ''''
+  - LSHFT
+  - W
+  - X
+  - C
+  - V
+  - B
+  - N
+  - ','
+  - ;
+  - ':'
+  - /
+  - ESC
+  - LGUI
+  - CHIFFRES
+  - SPACE
+  - SPACE
+  - SYMBOLES
+  - RALT
   CHIFFRES:
   - TAB
   - Sft+1
