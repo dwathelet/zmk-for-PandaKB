@@ -19,6 +19,60 @@
         };
     };
 
+    behaviors {
+        hrm_left: hrm_left {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_LEFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 22 34>;
+        };
+
+        hrm_right: hrm_right {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_RIGHT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <150>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 17 5 29>;
+        };
+
+        hrm_left_shift: hrm_left_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_LEFT_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <50>;
+            hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 22 34>;
+        };
+
+        hrm_right_shift: hrm_right_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HRM_RIGHT_SHIFT";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <50>;
+            flavor = "balanced";
+            hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 17 5 29>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -32,10 +86,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE  &kp SPACE  &mo 2  &kp RALT
+&kp TAB    &kp Q                 &kp W                 &kp E              &kp R                         &kp T      &kp Y      &kp U                           &kp I               &kp O                  &kp P                      &kp BSPC
+&kp LCTRL  &hrm_left LEFT_GUI A  &hrm_left LEFT_ALT S  &hrm_left LCTRL D  &hrm_left_shift LEFT_SHIFT F  &kp G      &kp H      &hrm_right_shift RIGHT_SHIFT J  &hrm_right RCTRL K  &hrm_right LEFT_ALT L  &hrm_right RIGHT_GUI SEMI  &kp SQT
+&kp LSHFT  &kp Z                 &kp X                 &kp C              &kp V                         &kp B      &kp N      &kp M                           &kp COMMA           &kp DOT                &kp FSLH                   &kp ESC
+                                                       &kp LGUI           &mo 1                         &kp SPACE  &kp SPACE  &mo 2                           &kp RALT
             >;
         };
 
