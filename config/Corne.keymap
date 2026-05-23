@@ -29,7 +29,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <250>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>;
             hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 22 34>;
         };
 
@@ -39,9 +39,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <175>;
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <200>;
             flavor = "tap-preferred";
             hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 17 5 29>;
         };
@@ -69,32 +69,6 @@
             quick-tap-ms = <175>;
             require-prior-idle-ms = <50>;
             flavor = "balanced";
-            hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 17 5 29>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <250>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <200>;
-            hold-trigger-key-positions = <6 18 30 31 19 7 8 20 32 33 21 9 10 22 34>;
-        };
-
-        new_behavior: new_behavior {
-            compatible = "zmk,behavior-hold-tap";
-            label = "NEW_BEHAVIOR";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <200>;
-            flavor = "tap-preferred";
             hold-trigger-key-positions = <1 13 25 26 14 2 3 15 27 28 16 4 17 5 29>;
         };
     };
