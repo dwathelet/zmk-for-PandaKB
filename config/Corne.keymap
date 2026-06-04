@@ -158,30 +158,20 @@
         game_base {
             display-name = "SATIS_BASE";
             bindings = <
-// -----------------------------------------------------------------------------------------
-// |  TAB |  N   |  W  |  E  |  R  |  T  |   | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
-// | SHIFT|  A   |  S  |  D  |  X  |  G  |   | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
-// | CTRL |  Z   |  C  |  V  |  B  |  F5 |   | TRANS | TRANS | TRANS | TRANS | TRANS | TO_0  |
-//                    | MO(5)| SPACE| ALT |   | TO_0  | TRANS | TRANS |
-        &kp TAB    &kp N  &kp W  &kp E  &kp R  &kp T       &trans &trans &trans &trans &trans &trans
-        &kp LSHIFT &kp A  &kp S  &kp D  &kp X  &kp G       &trans &trans &trans &trans &trans &trans
-        &kp LCTRL  &kp Z  &kp C  &kp V  &kp B  &kp F5      &trans &trans &trans &trans &trans &to 0
-                         &mo 5  &kp SPACE &kp LALT         &to 0  &trans &trans
+&kp TAB     &kp N  &kp W  &kp E  &kp R      &kp T     &to 0   &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT  &kp A  &kp S  &kp D  &kp X      &kp G     &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL   &kp Z  &kp C  &kp V  &kp B      &kp F5    &trans  &trans  &trans  &trans  &trans  &to 0
+                          &mo 5  &kp SPACE  &kp LALT  &to 0   &trans  &trans
             >;
         };
 
         game_nav {
             display-name = "SATIS_NAV";
             bindings = <
-// -----------------------------------------------------------------------------------------
-// |  1   |  2   |  W  |  3  |  4  |  5  |   | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
-// | SHIFT|  A   |  S  |  D  |  6  |  7  |   | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
-// | CTRL |  8   |  9  |  0  |  M  |  O  |   | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
-//                    |TRANS | SPACE| ALT |   | TRANS | TRANS | TRANS |
-        &kp N1     &kp N2 &kp W  &kp N3 &kp N4 &kp N5      &trans &trans &trans &trans &trans &trans
-        &kp LSHIFT &kp A  &kp S  &kp D  &kp N6 &kp N7      &trans &trans &trans &trans &trans &trans
-        &kp LCTRL  &kp N8 &kp N9 &kp N0 &kp M  &kp O       &trans &trans &trans &trans &trans &trans
-                          &trans &kp SPACE &kp LALT        &trans &trans &trans
+&kp N1      &kp N2  &kp W   &kp N3  &kp N4     &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LSHIFT  &kp A   &kp S   &kp D   &kp N6     &kp N7    &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL   &kp N8  &kp N9  &kp N0  &kp M      &kp O     &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans  &kp SPACE  &kp LALT  &trans  &trans  &trans
             >;
         };
     };
