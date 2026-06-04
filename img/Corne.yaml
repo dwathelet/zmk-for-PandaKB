@@ -179,7 +179,7 @@ layers:
   - E
   - R
   - T
-  - {t: ▽, type: trans}
+  - {t: AZERTY, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
