@@ -158,10 +158,10 @@
         game_base {
             display-name = "SATIS_BASE";
             bindings = <
-&kp TAB     &kp N  &kp W  &kp E  &kp R      &kp T     &to 0   &trans  &trans  &trans  &trans  &trans
+&kp TAB     &kp N  &kp W  &kp E  &kp R      &kp T     &trans  &trans  &trans  &trans  &trans
 &kp LSHIFT  &kp A  &kp S  &kp D  &kp X      &kp G     &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL   &kp Z  &kp C  &kp V  &kp B      &kp F5    &trans  &trans  &trans  &trans  &trans  &to 0
-                          &mo 5  &kp SPACE  &kp LALT  &to 0   &trans  &trans
+&kp LCTRL   &kp Z  &kp C  &kp V  &kp B      &kp F5    &trans  &trans  &trans  &trans  &trans  &kp ESC
+                           &mo 5  &kp SPACE  &kp LALT  &to 0   &trans  &trans
             >;
         };
 
@@ -170,8 +170,8 @@
             bindings = <
 &kp N1      &kp N2  &kp W   &kp N3  &kp N4     &kp N5    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LSHIFT  &kp A   &kp S   &kp D   &kp N6     &kp N7    &trans  &trans  &trans  &trans  &trans  &trans
-&kp LCTRL   &kp N8  &kp N9  &kp N0  &kp M      &kp O     &trans  &trans  &trans  &trans  &trans  &trans
-                            &trans  &kp SPACE  &kp LALT  &trans  &trans  &trans
+&kp LCTRL   &kp N8  &kp N9  &kp N0  &kp M      &kp O     &trans  &trans  &trans  &trans  &trans  &kp ESC
+                            &trans  &kp SPACE  &kp LALT  &to 0   &trans  &trans
             >;
         };
     };
