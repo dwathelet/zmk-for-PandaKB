@@ -100,7 +100,7 @@
 &kp TAB    &kp Q                 &kp W                 &kp E              &kp R                         &kp T      &kp Y                           &kp U                           &kp I               &kp O                  &kp P                      &kp BSPC
 &kp LCTRL  &hrm_left LEFT_GUI A  &hrm_left LEFT_ALT S  &hrm_left LCTRL D  &hrm_left_shift LEFT_SHIFT F  &kp G      &kp H                           &hrm_right_shift RIGHT_SHIFT J  &hrm_right RCTRL K  &hrm_right LEFT_ALT L  &hrm_right RIGHT_GUI SEMI  &kp SQT
 &kp LSHFT  &kp Z                 &kp X                 &kp C              &kp V                         &kp B      &kp N                           &kp M                           &kp COMMA           &kp DOT                &kp FSLH                   &kp ESC
-                                                       &kp LGUI           &mo 1                         &kp SPACE  &bspc_hold_ent ENTER BACKSPACE  &mo 2                           &kp RALT
+                                                       &kp LGUI           &mo 1                         &kp SPACE  &bspc_hold_ent ENTER BACKSPACE  &mo 2                           &mo 6
             >;
         };
 
@@ -172,6 +172,23 @@
 &kp LSHIFT  &kp A   &kp S   &kp D   &kp N6     &kp N7    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL   &kp N8  &kp N9  &kp N0  &kp M      &kp O     &trans  &trans  &trans  &trans  &trans  &kp ESC
                             &trans  &kp SPACE  &kp LALT  &to 0   &trans  &trans
+            >;
+        };
+
+        function_layer {
+            display-name = "FONCTIONS";
+
+            // -----------------------------------------------------------------------------------------
+            // | F11 | F1 | F2 | F3 | F4 | F5 |   | F6 | F7 | F8 | F9 | F10 | F12 |
+            // |     |  @ |    |    |    |    |   |    |    |    |    |     |     |
+            // |     |    |    |    |    |    |   |    |    |    |    |     |     |
+            //                    |     |    |    |   |    |     |     |
+
+            bindings = <
+&kp F11  &kp F1      &kp F2   &kp F3   &kp F4   &kp F5   &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp F12
+&trans   &kp RA(A)   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans    &trans
+&trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans    &trans
+                          &trans  &trans  &trans   &trans   &trans   &trans
             >;
         };
     };
