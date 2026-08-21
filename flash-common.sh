@@ -33,9 +33,11 @@ find_mount_point() {
 }
 
 wait_for_device() {
+    local expected_side=$1
     local mount_point
-    echo "---------------------------------------"
-    echo "🔍 En attente du clavier (Mode Bootloader)..."
+    echo "---------------------------------------" >&2
+    echo "🔍 En attente du clavier $expected_side (Mode Bootloader)..." >&2
+    echo "➡️  Branche maintenant le clavier $expected_side avec BOOT / double-reset." >&2
 
     while true; do
         if mount_point=$(find_mount_point); then
@@ -44,8 +46,8 @@ wait_for_device() {
             return 0
         fi
 
-        echo "⚠️  Non trouvé. Branche-le (double-reset)..." >&2
-        sleep 2
+        echo "⚠️  $expected_side non trouvé. Nouvel essai dans 5 secondes..." >&2
+        sleep 5
     done
 }
 
@@ -77,10 +79,10 @@ flash_pair() {
     local second_label=$4
     local mount_point
 
-    mount_point=$(wait_for_device)
+    mount_point=$(wait_for_device "$first_label")
     flash_firmware "$first_label" "$first_file" "$mount_point"
 
-    mount_point=$(wait_for_device)
+    mount_point=$(wait_for_device "$second_label")
     flash_firmware "$second_label" "$second_file" "$mount_point"
 }
 

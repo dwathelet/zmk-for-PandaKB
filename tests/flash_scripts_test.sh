@@ -29,6 +29,35 @@ expected=(
 
 [[ $(<"$event_log") == "$(printf '%s\n' "${expected[@]}")" ]]
 
+source "$repo_root/flash-common.sh"
+find_mount_point() {
+    printf '/tmp/NICENANO\n'
+}
+
+wait_output=$(wait_for_device "TEST" 2>/dev/null)
+[[ "$wait_output" == "/tmp/NICENANO" ]]
+
+source "$repo_root/flash-common.sh"
+probe_state=$(mktemp)
+probe_log=$(mktemp)
+probe_status=$(mktemp)
+trap 'rm -f "$event_log" "$probe_state" "$probe_log" "$probe_status"' EXIT
+find_mount_point() {
+    if [[ ! -s "$probe_state" ]]; then
+        printf 'first-attempt\n' >"$probe_state"
+        return 1
+    fi
+    printf '/tmp/NICENANO\n'
+}
+sleep() {
+    printf 'sleep:%s\n' "$1" >>"$probe_log"
+}
+
+wait_output=$(wait_for_device "GAUCHE" 2>"$probe_status")
+[[ "$wait_output" == "/tmp/NICENANO" ]]
+[[ $(<"$probe_log") == "sleep:5" ]]
+grep -q "GAUCHE" "$probe_status"
+
 for script in flash.sh reset.sh; do
     [[ -f "$repo_root/$script" ]]
     script_content=$(<"$repo_root/$script")
