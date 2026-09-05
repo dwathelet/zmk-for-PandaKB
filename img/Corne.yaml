@@ -42,7 +42,7 @@ layers:
   - SPACE
   - {t: BACKSPACE, h: ENTER}
   - SYMBOLES
-  - RALT
+  - FONCTIONS
   CHIFFRES:
   - TAB
   - Sft+1
@@ -179,7 +179,7 @@ layers:
   - E
   - R
   - T
-  - {t: AZERTY, h: toggle}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -208,7 +208,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: AZERTY, h: toggle}
+  - ESC
   - SATIS_NAV
   - SPACE
   - LALT
@@ -251,10 +251,53 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - ESC
   - {type: held}
   - SPACE
   - LALT
+  - {t: AZERTY, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  FONCTIONS:
+  - F11
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F12
+  - {t: ▽, type: trans}
+  - AltGr+1
+  - AltGr+2
+  - AltGr+E
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
