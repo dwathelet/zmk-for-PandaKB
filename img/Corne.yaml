@@ -284,22 +284,22 @@ layers:
   - {t: F9, h: dictée}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: →1, h: envoyer}
-  - {t: →2, h: envoyer}
-  - {t: →3, h: envoyer}
-  - {t: →4, h: envoyer}
-  - {t: →5, h: envoyer}
-  - {t: →6, h: envoyer}
-  - {t: →7, h: envoyer}
-  - {t: →8, h: envoyer}
-  - {t: →9, h: envoyer}
-  - {t: →10, h: envoyer}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Shift
   - {type: held}
   REGLAGES:
   - Bootloader
@@ -344,3 +344,6 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+combos:
+- p: [40, 41]
+  k: {t: BUREAU, h: + Shift}
