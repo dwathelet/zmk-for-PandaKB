@@ -38,7 +38,29 @@
         };
     };
 
+    // Les deux pouces droits extérieurs ensemble -> BUREAU avec Shift.
+    combos {
+        compatible = "zmk,combos";
+
+        bureau_shift {
+            timeout-ms = <60>;
+            key-positions = <40 41>;
+            bindings = <&bureau_shift>;
+        };
+    };
+
     macros {
+        // BUREAU + Shift : envoie la fenêtre au lieu d'aller au bureau.
+        bureau_shift: bureau_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &mo BUREAU &kp LSHFT>
+                , <&macro_pause_for_release>
+                , <&macro_release &mo BUREAU &kp LSHFT>
+                ;
+        };
+
         // Le tilde et l'accent grave sont des touches mortes en belge :
         // la touche morte suivie d'un espace donne le caractère seul.
         tilde: tilde {
@@ -203,20 +225,22 @@
         bureau_layer {
             display-name = "BUREAU";
 
-            // Raccourcis Omarchy complets. Ctrl, Shift et Super restent actifs :
-            // Shift + S← S↓ S↑ S→ échange les fenêtres.
-            // S = Super+…   SS = Super+Shift+…   Dict = dictée (F9, maintenir)
+            // Raccourcis Omarchy complets. Ctrl, Shift et Super restent actifs.
+            // Shift (pouce SYM, ou les deux pouces droits ensemble) + même touche :
+            //   S1…S10 -> envoyer la fenêtre vers ce bureau
+            //   S← S↓ S↑ S→ -> échanger les fenêtres
+            // S = Super+…   Dict = dictée (F9, maintenir)
             // -----------------------------------------------------------------------------------------
             // |  TAB | S1  | S2  | S3  | S4  | S5  |   | S6  | S7  | S8  | S9  | S10 |      |
             // | CTRL | Impr| Vol-| Vol+| Muet| ⏯   |   | S←  | S↓  | S↑  | S→  | Dict|      |
-            // | SHFT | SS1 | SS2 | SS3 | SS4 | SS5 |   | SS6 | SS7 | SS8 | SS9 | SS10| ESC  |
-            //                    | GUI | CHF | SPC |   | ENT | SYM | ███ |
+            // | SHFT |     |     |     |     |     |   |     |     |     |     |     | ESC  |
+            //                    | GUI | CHF | SPC |   | ENT |SHIFT| ███ |
 
             bindings = <
-&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)      &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)      &trans
-&trans  &kp PSCRN       &kp C_VOL_DN    &kp C_VOL_UP    &kp C_MUTE      &kp C_PP        &kp LG(LEFT)    &kp LG(DOWN)    &kp LG(UP)      &kp LG(RIGHT)   &kp F9          &trans
-&trans  &kp LG(LS(N1))  &kp LG(LS(N2))  &kp LG(LS(N3))  &kp LG(LS(N4))  &kp LG(LS(N5))  &kp LG(LS(N6))  &kp LG(LS(N7))  &kp LG(LS(N8))  &kp LG(LS(N9))  &kp LG(LS(N0))  &trans
-                                        &trans          &trans          &trans          &trans          &trans          &trans
+&trans  &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &kp LG(N4)  &kp LG(N5)  &kp LG(N6)    &kp LG(N7)    &kp LG(N8)  &kp LG(N9)     &kp LG(N0)  &trans
+&trans  &kp PSCRN   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_PP    &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &kp F9      &trans
+&trans  &none       &none         &none         &none       &none       &none         &none         &none       &none          &none       &trans
+                                  &trans        &trans      &trans      &trans        &kp LSHFT     &trans
             >;
         };
 
