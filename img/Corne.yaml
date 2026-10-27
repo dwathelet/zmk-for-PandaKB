@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: Corne}
 layers:
   AZERTY:
-  - TAB
+  - Tab
   - A
   - Z
   - E
@@ -12,20 +12,20 @@ layers:
   - I
   - O
   - P
-  - BSPC
-  - LCTRL
-  - {t: Q, h: LEFT GUI}
-  - {t: S, h: LEFT ALT}
-  - {t: D, h: LCTRL}
-  - {t: F, h: LEFT SHIFT}
+  - ⌫
+  - Ctrl
+  - {t: Q, h: Super}
+  - {t: S, h: Alt}
+  - {t: D, h: Ctrl}
+  - {t: F, h: Shift}
   - G
   - H
-  - {t: J, h: RIGHT SHIFT}
-  - {t: K, h: RCTRL}
-  - {t: L, h: LEFT ALT}
-  - {t: M, h: RIGHT GUI}
-  - ''''
-  - LSHFT
+  - {t: J, h: Shift}
+  - {t: K, h: Ctrl}
+  - {t: L, h: Alt}
+  - {t: M, h: Super}
+  - ù
+  - Shift
   - W
   - X
   - C
@@ -35,59 +35,59 @@ layers:
   - ','
   - ;
   - ':'
-  - /
-  - ESC
-  - LGUI
+  - '='
+  - Échap
+  - Super
   - CHIFFRES
-  - SPACE
-  - ENTER
+  - Espace
+  - Entrée
   - SYMBOLES
   - BUREAU
   CHIFFRES:
-  - TAB
-  - Sft+1
-  - Sft+2
-  - Sft+3
-  - Sft+4
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - Sft+9
-  - Sft+0
-  - DELETE
+  - Tab
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - Suppr
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LEFT ARROW
-  - DOWN ARROW
-  - UP ARROW
-  - RIGHT ARROW
+  - ←
+  - ↓
+  - ↑
+  - →
   - {t: ▽, type: trans}
-  - INSERT
-  - LSHFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Inser
+  - Shift
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - HOME
-  - END
-  - PAGE DOWN
-  - PAGE UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LGUI
+  - Début
+  - Fin
+  - Pg↓
+  - Pg↑
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Super
   - {type: held}
-  - ENTER
-  - RET
+  - Entrée
+  - Entrée
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   SYMBOLES:
-  - TAB
+  - Tab
   - '&'
   - é
   - '"'
@@ -98,37 +98,37 @@ layers:
   - '!'
   - ç
   - à
-  - BSPC
-  - LCTRL
-  - AltGr+1
-  - AltGr+2
-  - AltGr+3
+  - ⌫
+  - Ctrl
+  - '|'
+  - '@'
+  - '#'
   - (
-  - '-'
-  - '5'
-  - '-'
-  - AltGr+[
-  - AltGr+]
+  - )
+  - (
+  - )
   - '['
-  - ''''
-  - LSHFT
-  - NUBS
-  - Sft+NUBS
-  - AltGr+NUBS
-  - '&tilde'
-  - '&backtick'
-  - _
-  - '='
-  - AltGr+9
-  - AltGr+0
   - ']'
+  - ^
+  - ù
+  - Shift
+  - <
+  - '>'
   - \
-  - LGUI
+  - '~'
+  - '`'
+  - °
+  - '-'
+  - '{'
+  - '}'
+  - $
+  - µ
+  - Super
   - {t: ▽, type: trans}
-  - ENTER
-  - RET
+  - Entrée
+  - Entrée
   - {type: held}
-  - RALT
+  - AltGr
   FONCTIONS:
   - F11
   - F1
@@ -139,13 +139,13 @@ layers:
   - F6
   - F7
   - F8
-  - F9
+  - {t: F9, h: dictée}
   - F10
   - F12
   - {t: ▽, type: trans}
-  - AltGr+1
-  - AltGr+2
-  - AltGr+E
+  - '|'
+  - '@'
+  - €
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -173,7 +173,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   SATIS_BASE:
-  - TAB
+  - Tab
   - N
   - Z
   - E
@@ -185,7 +185,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHIFT
+  - Shift
   - Q
   - S
   - D
@@ -197,7 +197,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LCTRL
+  - Ctrl
   - W
   - C
   - V
@@ -208,10 +208,10 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESC
+  - Échap
   - SATIS_NAV
-  - SPACE
-  - LALT
+  - Espace
+  - Alt
   - {t: AZERTY, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -228,7 +228,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LSHIFT
+  - Shift
   - Q
   - S
   - D
@@ -240,7 +240,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - LCTRL
+  - Ctrl
   - '!'
   - ç
   - à
@@ -251,49 +251,49 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - ESC
+  - Échap
   - {type: held}
-  - SPACE
-  - LALT
+  - Espace
+  - Alt
   - {t: AZERTY, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   BUREAU:
   - {t: ▽, type: trans}
-  - Gui+1
-  - Gui+2
-  - Gui+3
-  - Gui+4
-  - Gui+5
-  - Gui+6
-  - Gui+7
-  - Gui+8
-  - Gui+9
-  - Gui+0
+  - {t: '1', h: bureau}
+  - {t: '2', h: bureau}
+  - {t: '3', h: bureau}
+  - {t: '4', h: bureau}
+  - {t: '5', h: bureau}
+  - {t: '6', h: bureau}
+  - {t: '7', h: bureau}
+  - {t: '8', h: bureau}
+  - {t: '9', h: bureau}
+  - {t: '10', h: bureau}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PSCRN
-  - VOL DN
-  - VOL UP
-  - MUTE
-  - PP
-  - Gui+LEFT
-  - Gui+DOWN
-  - Gui+UP
-  - Gui+RIGHT
-  - F9
+  - Impr
+  - Vol−
+  - Vol+
+  - Muet
+  - ⏯
+  - {t: ←, h: focus}
+  - {t: ↓, h: focus}
+  - {t: ↑, h: focus}
+  - {t: →, h: focus}
+  - {t: F9, h: dictée}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Gui+Sft+1
-  - Gui+Sft+2
-  - Gui+Sft+3
-  - Gui+Sft+4
-  - Gui+Sft+5
-  - Gui+Sft+6
-  - Gui+Sft+7
-  - Gui+Sft+8
-  - Gui+Sft+9
-  - Gui+Sft+0
+  - {t: →1, h: envoyer}
+  - {t: →2, h: envoyer}
+  - {t: →3, h: envoyer}
+  - {t: →4, h: envoyer}
+  - {t: →5, h: envoyer}
+  - {t: →6, h: envoyer}
+  - {t: →7, h: envoyer}
+  - {t: →8, h: envoyer}
+  - {t: →9, h: envoyer}
+  - {t: →10, h: envoyer}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -302,8 +302,8 @@ layers:
   - {t: ▽, type: trans}
   - {type: held}
   REGLAGES:
-  - '&bootloader'
-  - '&sys_reset'
+  - Bootloader
+  - Reset
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -312,18 +312,18 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - '&sys_reset'
-  - '&bootloader'
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - RGB TOG
-  - RGB BRI
-  - RGB BRD
-  - RGB EFF
+  - Reset
+  - Bootloader
+  - {t: BT, h: effacer}
+  - BT 1
+  - BT 2
+  - BT 3
+  - BT 4
+  - BT 5
+  - {t: RGB, h: on/off}
+  - {t: RGB, h: lum+}
+  - {t: RGB, h: lum−}
+  - {t: RGB, h: effet}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
