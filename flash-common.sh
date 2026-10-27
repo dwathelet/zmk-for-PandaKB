@@ -114,8 +114,12 @@ download_artifacts() {
 
     status=$(jq -r '.[0].status' <<<"$latest_run")
     if [[ "$status" != "completed" ]]; then
-        echo "⏳ Build #$run_id en cours ; attente de sa fin..."
-        gh run watch "$run_id"
+        printf '⏳ Build #%s en cours ; attente de sa fin' "$run_id"
+        until [[ $(gh run view "$run_id" --json status --jq '.status') == "completed" ]]; do
+            printf '.'
+            sleep 10
+        done
+        echo
     fi
 
     conclusion=$(gh run view "$run_id" --json conclusion --jq '.conclusion')
