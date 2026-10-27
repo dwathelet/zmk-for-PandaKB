@@ -89,7 +89,9 @@ flash_pair() {
 download_artifacts() {
     local branch commit latest_run run_id status conclusion attempt
     branch=$(git branch --show-current)
-    commit=$(git rev-parse HEAD)
+    # Les commits « keymap-drawer render » ajoutés par GitHub ne sont pas
+    # compilés : on prend le dernier commit qui ne vient pas du rendu.
+    commit=$(git log -1 --format=%H --invert-grep --grep='^keymap-drawer render$' HEAD)
 
     command -v gh >/dev/null || {
         echo "❌ ERREUR : GitHub CLI (gh) est requis pour --download." >&2
