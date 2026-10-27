@@ -40,9 +40,9 @@ layers:
   - LGUI
   - CHIFFRES
   - SPACE
-  - {t: BACKSPACE, h: ENTER}
+  - ENTER
   - SYMBOLES
-  - FONCTIONS
+  - BUREAU
   CHIFFRES:
   - TAB
   - Sft+1
@@ -85,7 +85,7 @@ layers:
   - ENTER
   - RET
   - {t: ▽, type: trans}
-  - RALT
+  - {t: ▽, type: trans}
   SYMBOLES:
   - TAB
   - '&'
@@ -100,9 +100,9 @@ layers:
   - à
   - BSPC
   - LCTRL
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - AltGr+1
+  - AltGr+2
+  - AltGr+3
   - (
   - '-'
   - '5'
@@ -112,11 +112,11 @@ layers:
   - '['
   - ''''
   - LSHFT
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - NUBS
+  - Sft+NUBS
+  - AltGr+NUBS
+  - '&tilde'
+  - '&backtick'
   - _
   - '='
   - AltGr+9
@@ -129,29 +129,29 @@ layers:
   - RET
   - {type: held}
   - RALT
-  REGLAGES:
-  - '&bootloader'
-  - '&sys_reset'
+  FONCTIONS:
+  - F11
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F12
+  - {t: ▽, type: trans}
+  - AltGr+1
+  - AltGr+2
+  - AltGr+E
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: SATIS_BASE, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '&sys_reset'
-  - '&bootloader'
-  - BT CLR
-  - {t: BT, h: '0'}
-  - {t: BT, h: '1'}
-  - {t: BT, h: '2'}
-  - {t: BT, h: '3'}
-  - {t: BT, h: '4'}
-  - RGB TOG
-  - RGB BRI
-  - RGB BRD
-  - RGB EFF
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -258,37 +258,72 @@ layers:
   - {t: AZERTY, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  FONCTIONS:
-  - F11
-  - F1
-  - F2
-  - F3
-  - F4
-  - F5
-  - F6
-  - F7
-  - F8
+  BUREAU:
+  - {t: ▽, type: trans}
+  - Gui+1
+  - Gui+2
+  - Gui+3
+  - Gui+4
+  - Gui+5
+  - Gui+6
+  - Gui+7
+  - Gui+8
+  - Gui+9
+  - Gui+0
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PSCRN
+  - VOL DN
+  - VOL UP
+  - MUTE
+  - PP
+  - Gui+LEFT
+  - Gui+DOWN
+  - Gui+UP
+  - Gui+RIGHT
   - F9
-  - F10
-  - F12
-  - {t: ▽, type: trans}
-  - AltGr+1
-  - AltGr+2
-  - AltGr+E
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+Sft+1
+  - Gui+Sft+2
+  - Gui+Sft+3
+  - Gui+Sft+4
+  - Gui+Sft+5
+  - Gui+Sft+6
+  - Gui+Sft+7
+  - Gui+Sft+8
+  - Gui+Sft+9
+  - Gui+Sft+0
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {type: held}
+  REGLAGES:
+  - '&bootloader'
+  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: SATIS_BASE, h: toggle}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&sys_reset'
+  - '&bootloader'
+  - BT CLR
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - RGB TOG
+  - RGB BRI
+  - RGB BRD
+  - RGB EFF
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -297,6 +332,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
