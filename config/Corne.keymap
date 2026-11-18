@@ -46,6 +46,7 @@
             timeout-ms = <60>;
             key-positions = <40 41>;
             bindings = <&bureau_shift>;
+            layers = <AZERTY>;
         };
     };
 
@@ -167,14 +168,14 @@
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
-            // |      |     |     |     |     |     |   | LFT | DWN |  UP | RGT |     | INS  |
-            // | SHFT |     |     |     |     |     |   | HOME| END | PGDN| PGUP|     |      |
+            // |      |     |     |     |     |     |   |     | LFT | DWN |  UP | RGT | INS  |
+            // | SHFT |     |     |     |     |     |   |     | HOME| END | PGDN| PGUP|      |
             //                    | GUI |     | ENT |   | ENT |     | BUR |
 
             bindings = <
 &kp TAB    &kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)  &kp LS(N6)      &kp LS(N7)      &kp LS(N8)     &kp LS(N9)       &kp LS(N0)  &kp DELETE
-&trans     &trans      &trans      &trans      &trans      &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &trans      &kp INSERT
-&kp LSHFT  &trans      &trans      &trans      &trans      &trans      &kp HOME        &kp END         &kp PAGE_DOWN  &kp PAGE_UP      &trans      &trans
+&trans     &trans      &trans      &trans      &trans      &trans      &trans          &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW     &kp RIGHT_ARROW  &kp INSERT
+&kp LSHFT  &trans      &trans      &trans      &trans      &trans      &trans          &kp HOME        &kp END         &kp PAGE_DOWN    &kp PAGE_UP      &trans
                                    &kp LGUI    &trans      &kp ENTER   &kp RET         &trans          &trans
             >;
         };
