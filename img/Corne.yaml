@@ -62,13 +62,14 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - ←
   - ↓
   - ↑
   - →
-  - {t: ▽, type: trans}
   - Inser
   - Shift
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -78,7 +79,6 @@ layers:
   - Fin
   - Pg↓
   - Pg↑
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Super
   - {type: held}
@@ -347,3 +347,4 @@ layers:
 combos:
 - p: [40, 41]
   k: {t: BUREAU, h: + Shift}
+  l: [AZERTY]
