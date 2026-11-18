@@ -62,14 +62,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - ←
   - ↓
   - ↑
   - →
+  - {t: ▽, type: trans}
   - Inser
   - Shift
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -79,6 +78,7 @@ layers:
   - Fin
   - Pg↓
   - Pg↑
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Super
   - {type: held}
@@ -277,11 +277,11 @@ layers:
   - Vol+
   - Muet
   - ⏯
-  - {t: F9, h: dictée}
   - {t: ←, h: focus}
   - {t: ↓, h: focus}
   - {t: ↑, h: focus}
   - {t: →, h: focus}
+  - {t: F9, h: dictée}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - ''
