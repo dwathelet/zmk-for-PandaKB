@@ -15,10 +15,10 @@
 #define AZERTY    0
 #define CHIFFRES  1
 #define SYMBOLES  2
-#define FONCTIONS 3
-#define SATIS     4
-#define SATIS_NAV 5
-#define BUREAU    6
+#define BUREAU    3
+#define FONCTIONS 4
+#define SATIS     5
+#define SATIS_NAV 6
 #define REGLAGES  7
 
 / {
@@ -197,6 +197,28 @@
             >;
         };
 
+        bureau_layer {
+            display-name = "BUREAU";
+
+            // Raccourcis Omarchy complets. Ctrl, Shift et Super restent actifs.
+            // Shift (pouce SYM, ou les deux pouces droits ensemble) + même touche :
+            //   S1…S10 -> envoyer la fenêtre vers ce bureau
+            //   S← S↓ S↑ S→ -> échanger les fenêtres
+            // S = Super+…   Dict = dictée (F9, maintenir)
+            // -----------------------------------------------------------------------------------------
+            // |  TAB | S1  | S2  | S3  | S4  | S5  |   | S6  | S7  | S8  | S9  | S10 |      |
+            // | CTRL | Impr| Vol-| Vol+| Muet| ⏯   |   | S←  | S↓  | S↑  | S→  | Dict|      |
+            // | SHFT |     | Zm- | Zm+ |     |     |   |     |     |     |     |     | ESC  |
+            //                    | GUI | CHF | SPC |   | ENT |SHIFT| ███ |
+
+            bindings = <
+&trans  &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &kp LG(N4)  &kp LG(N5)  &kp LG(N6)    &kp LG(N7)    &kp LG(N8)  &kp LG(N9)     &kp LG(N0)  &trans
+&trans  &kp PSCRN   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_PP    &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &kp F9      &trans
+&trans  &none       &kp LC(KP_MINUS)  &kp LC(KP_PLUS)  &none       &none       &none         &none         &none       &none          &none       &trans
+                                  &trans        &trans      &trans      &trans        &kp LSHFT     &trans
+            >;
+        };
+
         function_layer {
             display-name = "FONCTIONS";
 
@@ -232,28 +254,6 @@
 &kp LSHIFT  &kp A   &kp S   &kp D   &kp N6     &kp N7    &trans  &trans  &trans  &trans  &trans  &trans
 &kp LCTRL   &kp N8  &kp N9  &kp N0  &kp M      &kp O     &trans  &trans  &trans  &trans  &trans  &kp ESC
                             &trans  &kp SPACE  &kp LALT  &to AZERTY  &trans  &trans
-            >;
-        };
-
-        bureau_layer {
-            display-name = "BUREAU";
-
-            // Raccourcis Omarchy complets. Ctrl, Shift et Super restent actifs.
-            // Shift (pouce SYM, ou les deux pouces droits ensemble) + même touche :
-            //   S1…S10 -> envoyer la fenêtre vers ce bureau
-            //   S← S↓ S↑ S→ -> échanger les fenêtres
-            // S = Super+…   Dict = dictée (F9, maintenir)
-            // -----------------------------------------------------------------------------------------
-            // |  TAB | S1  | S2  | S3  | S4  | S5  |   | S6  | S7  | S8  | S9  | S10 |      |
-            // | CTRL | Impr| Vol-| Vol+| Muet| ⏯   |   | S←  | S↓  | S↑  | S→  | Dict|      |
-            // | SHFT |     |     |     |     |     |   |     |     |     |     |     | ESC  |
-            //                    | GUI | CHF | SPC |   | ENT |SHIFT| ███ |
-
-            bindings = <
-&trans  &kp LG(N1)  &kp LG(N2)    &kp LG(N3)    &kp LG(N4)  &kp LG(N5)  &kp LG(N6)    &kp LG(N7)    &kp LG(N8)  &kp LG(N9)     &kp LG(N0)  &trans
-&trans  &kp PSCRN   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &kp C_PP    &kp LG(LEFT)  &kp LG(DOWN)  &kp LG(UP)  &kp LG(RIGHT)  &kp F9      &trans
-&trans  &none       &none         &none         &none       &none       &none         &none         &none       &none          &none       &trans
-                                  &trans        &trans      &trans      &trans        &kp LSHFT     &trans
             >;
         };
 

@@ -148,6 +148,8 @@ parse_config:
     "&kp LG(N9)": {t: "9", h: bureau}
     "&kp LG(N0)": {t: "10", h: bureau}
     "&bureau_shift": {t: BUREAU, h: + Shift}
+    "&kp LC(KP_MINUS)": {t: "Zoom −", h: Ctrl}
+    "&kp LC(KP_PLUS)": {t: "Zoom +", h: Ctrl}
     "&kp LG(LEFT)": {t: "←", h: focus}
     "&kp LG(DOWN)": {t: "↓", h: focus}
     "&kp LG(UP)": {t: "↑", h: focus}
