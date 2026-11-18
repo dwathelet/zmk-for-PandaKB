@@ -129,6 +129,49 @@ layers:
   - Entrée
   - {type: held}
   - AltGr
+  BUREAU:
+  - {t: ▽, type: trans}
+  - {t: '1', h: bureau}
+  - {t: '2', h: bureau}
+  - {t: '3', h: bureau}
+  - {t: '4', h: bureau}
+  - {t: '5', h: bureau}
+  - {t: '6', h: bureau}
+  - {t: '7', h: bureau}
+  - {t: '8', h: bureau}
+  - {t: '9', h: bureau}
+  - {t: '10', h: bureau}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Impr
+  - Vol−
+  - Vol+
+  - Muet
+  - ⏯
+  - {t: ←, h: focus}
+  - {t: ↓, h: focus}
+  - {t: ↑, h: focus}
+  - {t: →, h: focus}
+  - {t: F9, h: dictée}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: Zoom −, h: Ctrl}
+  - {t: Zoom +, h: Ctrl}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Shift
+  - {type: held}
   FONCTIONS:
   - F11
   - F1
@@ -258,49 +301,6 @@ layers:
   - {t: AZERTY, h: toggle}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  BUREAU:
-  - {t: ▽, type: trans}
-  - {t: '1', h: bureau}
-  - {t: '2', h: bureau}
-  - {t: '3', h: bureau}
-  - {t: '4', h: bureau}
-  - {t: '5', h: bureau}
-  - {t: '6', h: bureau}
-  - {t: '7', h: bureau}
-  - {t: '8', h: bureau}
-  - {t: '9', h: bureau}
-  - {t: '10', h: bureau}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Impr
-  - Vol−
-  - Vol+
-  - Muet
-  - ⏯
-  - {t: ←, h: focus}
-  - {t: ↓, h: focus}
-  - {t: ↑, h: focus}
-  - {t: →, h: focus}
-  - {t: F9, h: dictée}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - Shift
-  - {type: held}
   REGLAGES:
   - Bootloader
   - Reset
